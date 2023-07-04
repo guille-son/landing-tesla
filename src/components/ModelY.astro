@@ -1,34 +1,31 @@
-<section 
-    class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"data-header-color="black">
+---
+import Section from "./Section.astro";
+---
 
-    <div class="z-30 relative h-full flex flex-col">
-        <header>
-            <h2 class="text-black pt-40 text-[40px] font-medium">
-                Model Y
-            </h2>
+<Section
+    title="Model Y"
+    subtitle="Concertar una prueba de conduccion"
+    color="black"
+>
+    <div slot="footer" class="gap-x-6 flex mx-auto">
+        <a
+            class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block transition-colors hover:bg-gray-500 hover:text-white hover:border-gray-500"
+            href="#"
+        >
+            Explorar Inventario
+        </a>
 
-            <p class="text-black text-sm underline">
-                Concertar una prueba de conduccion
-            </p>
-        </header>
-
-        <footer class="flex flex-col flex-grow justify-end pb-20" >
-
-            <div class="gap-x-6 flex mx-auto">
-                <a class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block
-                transition-colors hover:bg-gray-500 hover:text-white hover:border-gray-500" href="#">
-                    Explorar Inventario
-                </a>
-
-                <a class="border-[3px] border-white-500 bg-white text-sm rounded font-medium text-black px-12 py-2 inline-flex
-                hover:bg-black hover:text-white hover:border-black transition-colors justify-center items-center" href="#">
-                    Pedido Personalizado
-                </a>
-            </div>
-        </footer>
-
+        <a
+            class="border-[3px] border-white-500 bg-white text-sm rounded font-medium text-black px-12 py-2 inline-flex hover:bg-black hover:text-white hover:border-black transition-colors justify-center items-center"
+            href="#"
+        >
+            Pedido Personalizado
+        </a>
     </div>
-    <div class="absolute top-0 bottom-0 h-full w-full z-10">
-        <img src="/model-y.avif" alt="Model-y" class=" h-full w-full object-center object-cover" ></img>
-    </div>
-</section>
+    <img
+        slot="background"
+        src="/model-y.avif"
+        alt="Model-y"
+        class="h-full w-full object-center object-cover"
+    />
+</Section>
